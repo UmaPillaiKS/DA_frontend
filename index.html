@@ -29,7 +29,7 @@
 
     <script>
         // Fetch students data from backend and populate the table
-        fetch('/api/students')
+        fetch('https://dabackend.azurewebsites.net/api/students')
             .then(response => response.json())
             .then(data => {
                 const studentTableBody = document.getElementById('studentTableBody');
@@ -50,7 +50,7 @@
                 name: 'New Student', // You may want to get this value from a form input
                 contact: '1234567890' // You may want to get this value from a form input
             };
-            fetch('/api/students', {
+            fetch('https://dabackend.azurewebsites.net/api/students', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
